@@ -1,43 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Pressable, StyleSheet, View, Animated } from 'react-native';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { colors } from '../colors/colors';
 
-const CustomSwitch = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const translateX = new Animated.Value(isEnabled ? 30 : 0);
+interface CustomSwitchProps {
+  enabled: boolean; // Receive the initial enabled state
+  onValueChange: () => void; // Function to handle toggling
+}
 
-  const toggleSwitch = () => {
-    setIsEnabled((prev) => !prev);
+const CustomSwitch: React.FC<CustomSwitchProps> = ({
+  enabled,
+  onValueChange,
+}) => {
+  const translateX = useRef(new Animated.Value(enabled ? 30 : 0)).current;
+
+  useEffect(() => {
     Animated.timing(translateX, {
-      toValue: isEnabled ? 0 : 30,
+      toValue: enabled ? 30 : 0,
       duration: 200,
-      useNativeDriver: true,
+      useNativeDriver: false,
     }).start();
-  };
+  }, [enabled]); // Run animation whenever `enabled` changes
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        <Pressable
-          onPress={toggleSwitch}
-          style={[styles.switch, isEnabled ? styles.on : styles.off]}
-        >
-          <Animated.View
-            style={[styles.circle, { transform: [{ translateX }] }]}
-          />
-        </Pressable>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <Pressable
+      onPress={onValueChange} // Calls the function to update state
+      style={[styles.switch, enabled ? styles.on : styles.off]}
+    >
+      <Animated.View style={[styles.circle, { transform: [{ translateX }] }]} />
+    </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   switch: {
     width: 70,
     height: 40,
@@ -46,10 +40,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   on: {
-    backgroundColor: colors.rosaPastel, // Bright green when ON
+    backgroundColor: colors.rosaPastel,
   },
   off: {
-    backgroundColor: colors.rojoSuave, // Red when OFF
+    backgroundColor: colors.rojoSuave,
   },
   circle: {
     width: 30,

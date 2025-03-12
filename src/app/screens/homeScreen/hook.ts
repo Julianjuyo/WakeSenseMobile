@@ -12,7 +12,7 @@ export function useHomeScreen() {
   };
 
   const handleListAlarma = () => {
-    // navigation.navigate('listAlarmsScreen');
+    navigation.navigate('listAlarmsScreen');
   };
 
   return {
