@@ -45,7 +45,7 @@ export const typography = StyleSheet.create({
   },
   button: {
     fontFamily: 'Inter-Bold',
-    fontSize: 14,
+    fontSize: 16,
     lineHeight: 25,
     color: colors.negro,
   },

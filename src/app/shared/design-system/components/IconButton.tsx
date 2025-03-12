@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, View, Image } from 'react-native';
 import { colors } from '../colors/colors';
+import Typography from '../Typography/Typography';
 
 export type IconButtonState = 'active' | 'inactive';
 
@@ -30,7 +31,9 @@ export default function IconButton({
         ) : (
           icon
         )}
-        <Text style={[styles.text, styles[`${state}Text`]]}>{label}</Text>
+        <Typography type="button" style={[styles.text, styles[`${state}Text`]]}>
+          {label}
+        </Typography>
       </View>
     </TouchableOpacity>
   );
@@ -54,7 +57,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
-    marginRight: 10,
+    marginRight: 20,
   },
   active: {
     backgroundColor: colors.morado,
@@ -63,8 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.gris,
   },
   text: {
-    fontFamily: 'Inter-Bold',
-    fontSize: 14,
+    marginLeft: 10,
   },
   activeText: {
     color: colors.blanco,

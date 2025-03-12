@@ -1,9 +1,5 @@
 import { IPagesNavigation } from '@/src/interfaces';
-import {
-  NavigationProp,
-  useFocusEffect,
-  useNavigation,
-} from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 
 export function useloginScreenScreen() {

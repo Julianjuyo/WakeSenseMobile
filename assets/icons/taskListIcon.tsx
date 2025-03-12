@@ -1,14 +1,18 @@
 import * as React from 'react';
 import Svg, { G, Path, Defs, ClipPath } from 'react-native-svg';
+import { SvgComponentProps } from '.';
 
-function SvgComponent(props:any) {
+function SvgComponent({
+  width = 50,
+  height = 50,
+  ...props
+}: SvgComponentProps) {
   return (
     <Svg
-      width={20}
-      height={20}
+      width={width}
+      height={height}
       viewBox="0 0 20 20"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <G fill="#000" clipPath="url(#clip0_2013_1660)">
