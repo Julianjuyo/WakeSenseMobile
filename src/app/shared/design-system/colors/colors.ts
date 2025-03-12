@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const colors = {
   morado: '#4B1F9A',
   lavanda: '#9162F2',
-  rosaPastel: '#54EE13',
+  verdeClaro: '#54EE13',
   blanco: '#E5E5E5',
   negro: '#121212',
   rojoSuave: '#D15A5A',
@@ -18,8 +18,8 @@ export const colorPalette = StyleSheet.create({
   lavanda: {
     color: colors.lavanda,
   },
-  rosaPastel: {
-    color: colors.rosaPastel,
+  verdeClaro: {
+    color: colors.verdeClaro,
   },
   blanco: {
     color: colors.blanco,

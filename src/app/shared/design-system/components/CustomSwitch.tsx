@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   on: {
-    backgroundColor: colors.rosaPastel,
+    backgroundColor: colors.verdeClaro,
   },
   off: {
     backgroundColor: colors.rojoSuave,

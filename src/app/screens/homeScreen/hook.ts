@@ -1,5 +1,6 @@
 import { IPagesNavigation } from '@/src/interfaces';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
+
 export function useHomeScreen() {
   const navigation = useNavigation<NavigationProp<IPagesNavigation>>();
 
@@ -8,7 +9,7 @@ export function useHomeScreen() {
   };
 
   const handleCreateAlarm = () => {
-    // navigation.navigate('createAlarmScreen');
+    navigation.navigate('createAlarmScreen');
   };
 
   const handleListAlarma = () => {
