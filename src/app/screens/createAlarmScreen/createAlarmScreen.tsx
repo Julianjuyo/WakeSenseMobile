@@ -6,6 +6,7 @@ import Button from '../../shared/design-system/components/Button';
 import CustomSwitch from '../../shared/design-system/components/CustomSwitch';
 import LabelCustomSwitch from '../../shared/design-system/components/LabelCustomSwitch';
 import { useCreateAlarm } from './hook';
+import { RouteProp, useRoute } from '@react-navigation/native';
 
 interface CreateAlarmScreenProps {
   initialHour?: number;
@@ -13,7 +14,10 @@ interface CreateAlarmScreenProps {
   initialIsPM?: boolean;
 }
 
-export default function CreateAlarmScreen(props: CreateAlarmScreenProps) {
+export default function CreateAlarmScreen() {
+  const route =
+    useRoute<RouteProp<{ params: CreateAlarmScreenProps }, 'params'>>();
+  const { initialHour, initialMinute, initialIsPM } = route.params || {};
   const {
     isAlarmEnabled,
     selectedHour,
@@ -29,7 +33,7 @@ export default function CreateAlarmScreen(props: CreateAlarmScreenProps) {
     handleDeleteAlarm,
     handleAlarmSound,
     handleAlarmNotification,
-  } = useCreateAlarm(props);
+  } = useCreateAlarm({ initialHour, initialMinute, initialIsPM });
 
   return (
     <View style={styles.container}>

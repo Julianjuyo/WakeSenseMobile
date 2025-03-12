@@ -13,22 +13,25 @@ import CustomSwitch from '../../shared/design-system/components/CustomSwitch';
 import { uselistAlarmsScreen } from './hook';
 
 export default function listAlarmsScreen() {
-  const { alarms, toggleSwitch, handleGoBack } = uselistAlarmsScreen();
+  const { alarms, toggleSwitch, handleGoBack, handleEditAlarm } =
+    uselistAlarmsScreen();
 
   const renderItem = ({
     item,
   }: {
     item: { id: string; time: string; enabled: boolean };
   }) => (
-    <View style={styles.alarmItem}>
-      <Typography type="h1" style={styles.alarmText}>
-        {item.time}
-      </Typography>
-      <CustomSwitch
-        enabled={item.enabled}
-        onValueChange={() => toggleSwitch(item.id)}
-      />
-    </View>
+    <TouchableOpacity onPress={() => handleEditAlarm(item.time)}>
+      <View style={styles.alarmItem}>
+        <Typography type="h1" style={styles.alarmText}>
+          {item.time}
+        </Typography>
+        <CustomSwitch
+          enabled={item.enabled}
+          onValueChange={() => toggleSwitch(item.id)}
+        />
+      </View>
+    </TouchableOpacity>
   );
 
   return (

@@ -30,9 +30,25 @@ export function uselistAlarmsScreen() {
     navigation.navigate('homeScreen');
   };
 
+  const handleEditAlarm = (time: string) => {
+    // Extract hour, minute, and AM/PM
+    const timeParts = time.split(/[: ]/); // Split by ":" and space
+    const hour = parseInt(timeParts[0], 10);
+    const minute = parseInt(timeParts[1], 10);
+    const isPM = timeParts[2] === 'PM';
+
+    // Navigate using the correct screen name
+    navigation.navigate('createAlarmScreen', {
+      initialHour: hour,
+      initialMinute: minute,
+      initialIsPM: isPM,
+    });
+  };
+
   return {
     alarms,
     toggleSwitch,
     handleGoBack,
+    handleEditAlarm,
   };
 }
