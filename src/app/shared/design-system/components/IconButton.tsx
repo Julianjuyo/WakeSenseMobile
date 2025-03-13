@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, View, Image } from 'react-native';
-import { colors } from '../colors/colors';
+import colors from '../colors/colors';
 import Typography from '../Typography/Typography';
 
 export type IconButtonState = 'active' | 'inactive';

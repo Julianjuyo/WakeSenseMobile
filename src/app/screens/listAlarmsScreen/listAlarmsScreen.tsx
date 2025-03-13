@@ -6,15 +6,15 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-import { colors } from '../../shared/design-system/colors/colors';
+import colors from '../../shared/design-system/colors/colors';
 import { ArrowBack } from '@/assets/icons';
 import Typography from '../../shared/design-system/Typography/Typography';
 import CustomSwitch from '../../shared/design-system/components/CustomSwitch';
-import { uselistAlarmsScreen } from './hook';
+import useListAlarmsScreen from './hook';
 
-export default function listAlarmsScreen() {
+export default function ListAlarmsScreen() {
   const { alarms, toggleSwitch, handleGoBack, handleEditAlarm } =
-    uselistAlarmsScreen();
+    useListAlarmsScreen();
 
   const renderItem = ({
     item,

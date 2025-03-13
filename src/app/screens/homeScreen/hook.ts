@@ -1,19 +1,19 @@
 import { IPagesNavigation } from '@/src/interfaces';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 
-export function useHomeScreen() {
+export default function useHomeScreen() {
   const navigation = useNavigation<NavigationProp<IPagesNavigation>>();
 
   const handleLogout = () => {
-    navigation.navigate('loginScreen');
+    navigation.navigate('LoginScreen');
   };
 
   const handleCreateAlarm = () => {
-    navigation.navigate('createAlarmScreen');
+    navigation.navigate('CreateAlarmScreen');
   };
 
   const handleListAlarma = () => {
-    navigation.navigate('listAlarmsScreen');
+    navigation.navigate('ListAlarmsScreen');
   };
 
   return {

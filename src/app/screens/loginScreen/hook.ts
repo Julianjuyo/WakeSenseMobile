@@ -2,7 +2,7 @@ import { IPagesNavigation } from '@/src/interfaces';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 
-export function useloginScreenScreen() {
+export default function useLoginScreenScreen() {
   const navigation = useNavigation<NavigationProp<IPagesNavigation>>();
 
   const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ export function useloginScreenScreen() {
 
   const handleLogin = () => {
     if (isFormValid) {
-      navigation.navigate('homeScreen');
+      navigation.navigate('HomeScreen');
     }
   };
 

@@ -1,50 +1,90 @@
-# Welcome to your Expo app 👋
+# 🚀 WakeSenseMobile - Setup Guide
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📋 Prerequisites
 
-## Get started
+Before running this project, ensure you have the following installed:
 
-1. Install dependencies
+- [**Node.js**](https://nodejs.org/) (Recommended: v16+)
+- [**Git**](https://git-scm.com/) (For cloning the repository)
+- [**Android Studio**](https://developer.android.com/studio) (To create an Android emulator)
+- **Expo CLI** (For running the project)
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📌 Step 1: Install Expo CLI
 
-   ```bash
-    npx expo start
-   ```
+First, install Expo CLI globally on your system:
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+npm install -g expo-cli
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📌 Step 2: Clone the Repository
 
-To learn more about developing your project with Expo, look at the following resources:
+Clone the project and navigate to the directory:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```sh
+git clone https://github.com/your-repo/alarm-app.git
+cd alarm-app
+```
 
-## Join the community
+Then install the project dependencies:
 
-Join our community of developers creating universal apps.
+```sh
+npm install  --legacy-peer-deps
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 📌 Step 3: Setup Android Emulator
+
+To run the app on an **Android emulator**, follow these steps:
+
+1. **Install Android Studio**:  
+   Download and install **[Android Studio](https://developer.android.com/studio)** if you haven't already.
+
+2. **Open Android Studio and create an emulator**:
+
+   - Open **Android Studio**.
+   - Go to **Tools → Device Manager**.
+   - Click **Create Virtual Device**.
+   - Select **Pixel 3** (or any recommended device).
+   - Click **Next**, select **a system image (API 31 or later)**, and click **Next**.
+   - Click **Finish** and start the emulator.
+
+3. **Ensure the emulator is running**:
+   - Open the **Device Manager** in Android Studio.
+   - Click **Play** (▶️) to start your emulator.
+
+---
+
+## 📌 Step 4: Start the Expo Development Server
+
+Run the following command in your terminal:
+
+```sh
+npx expo start
+```
+
+This will open the **Expo Developer Tools** in your browser.
+
+---
+
+## 📌 Step 5: Run the App on the Emulator
+
+Once the **Expo Developer Tools** are open:
+
+1. Look for the **"Run on Android device/emulator"** option.
+2. Click **"Run on Android emulator"**.
+3. Wait for the app to load in the emulator.
+
+---
+
+## 🎉 You're Ready to Go!
+
+Now you can start developing and testing the app using **Expo Go**! 🚀
+
+For any issues, check the **Expo documentation**:  
+🔗 [https://docs.expo.dev/](https://docs.expo.dev/)

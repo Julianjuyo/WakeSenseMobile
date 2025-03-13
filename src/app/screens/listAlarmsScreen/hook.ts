@@ -2,7 +2,7 @@ import { IPagesNavigation } from '@/src/interfaces';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 
-export function uselistAlarmsScreen() {
+export default function useListAlarmsScreen() {
   const navigation = useNavigation<NavigationProp<IPagesNavigation>>();
 
   const alarmsData = [
@@ -27,7 +27,7 @@ export function uselistAlarmsScreen() {
   };
 
   const handleGoBack = () => {
-    navigation.navigate('homeScreen');
+    navigation.navigate('HomeScreen');
   };
 
   const handleEditAlarm = (time: string) => {
@@ -38,7 +38,7 @@ export function uselistAlarmsScreen() {
     const isPM = timeParts[2] === 'PM';
 
     // Navigate using the correct screen name
-    navigation.navigate('createAlarmScreen', {
+    navigation.navigate('CreateAlarmScreen', {
       initialHour: hour,
       initialMinute: minute,
       initialIsPM: isPM,

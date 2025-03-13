@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, TextInput, View, TouchableOpacity } from 'react-native';
 import Typography from '../Typography/Typography';
-import { colors } from '../colors/colors';
+import colors from '../colors/colors';
 import { LockIcon, EyeIcon, EyeOffIcon, ErrorIcon } from '@/assets/icons';
-import { typography } from '../Typography/styles';
+import typography from '../Typography/styles';
 
 interface PasswordInputProps {
   value: string;

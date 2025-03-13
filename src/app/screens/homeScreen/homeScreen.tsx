@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
 import Typography from '../../shared/design-system/Typography/Typography';
-import { colors } from '../../shared/design-system/colors/colors';
+import colors from '../../shared/design-system/colors/colors';
 import {
   MoonIcon,
   StarIcon,
@@ -10,9 +10,9 @@ import {
 } from '@/assets/icons';
 import Button from '../../shared/design-system/components/Button';
 import IconButton from '../../shared/design-system/components/IconButton';
-import { useHomeScreen } from './hook';
+import useHomeScreen from './hook';
 
-export default function homeScreen() {
+export default function HomeScreen() {
   const { handleLogout, handleCreateAlarm, handleListAlarma } = useHomeScreen();
   return (
     <View style={styles.container}>

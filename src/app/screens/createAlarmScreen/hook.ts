@@ -3,7 +3,6 @@ import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { Audio } from 'expo-av';
 import { Alert } from 'react-native';
-import * as Permissions from 'expo-permissions';
 
 interface UseCreateAlarmProps {
   initialHour?: number;
@@ -11,7 +10,7 @@ interface UseCreateAlarmProps {
   initialIsPM?: boolean;
 }
 
-export function useCreateAlarm({
+export default function useCreateAlarm({
   initialHour,
   initialMinute,
   initialIsPM,
@@ -33,7 +32,6 @@ export function useCreateAlarm({
   const toggleAMPM = () => setIsPM((prev) => !prev);
   const toggleSoundTracking = async () => {
     const { status } = await Audio.requestPermissionsAsync();
-    console.log(status);
 
     if (status === 'granted') {
       setIsSoundTrackingEnabled((prev) => !prev);
@@ -47,19 +45,19 @@ export function useCreateAlarm({
   };
 
   const handleSaveAlarm = () => {
-    navigation.navigate('listAlarmsScreen');
+    navigation.navigate('ListAlarmsScreen');
   };
 
   const handleDeleteAlarm = () => {
-    // navigation.navigate('confirmDeleteAlarmScreen');
+    navigation.navigate('ConfirmDeleteAlarmScreen');
   };
 
   const handleAlarmSound = () => {
-    // navigation.navigate('soundListScreen');
+    navigation.navigate('SoundListScreen');
   };
 
   const handleAlarmNotification = () => {
-    // navigation.navigate('notificationsScreen');
+    navigation.navigate('NotificationsScreen');
   };
 
   return {

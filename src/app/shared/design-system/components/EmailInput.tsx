@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import Typography from '../Typography/Typography';
-import { colors } from '../colors/colors';
+import colors from '../colors/colors';
 import { MailIcon, ErrorIcon } from '@/assets/icons';
 
 interface EmailInputProps {
