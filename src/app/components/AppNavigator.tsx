@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from '../screens/LoginScreen/LoginScreen';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import ListAlarmsScreen from '../screens/ListAlarmsScreen/ListAlarmsScreen';
-import CreateAlarmScreen from '../screens/CreateAlarmScreen/CreateAlarmScreen';
+import LoginScreen from '../screens/LoginScreen/loginScreen';
+import HomeScreen from '../screens/HomeScreen/homeScreen';
+import ListAlarmsScreen from '../screens/ListAlarmsScreen/listAlarmsScreen';
+import CreateAlarmScreen from '../screens/CreateAlarmScreen/createAlarmScreen';
 import ConfirmDeleteAlarmScreen from '../screens/ConfirmDeleteAlarmScreen/ConfirmDeleteAlarmScreen';
 import NotificationsScreen from '../screens/NotificationsScreen/NotificationsScreen';
 import SoundListScreen from '../screens/SoundListScreen/SoundListScreen';
@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function AppNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName={'CreateAlarmScreen'}
+      initialRouteName={'LoginScreen'}
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
