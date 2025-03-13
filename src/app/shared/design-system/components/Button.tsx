@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { colors } from '../colors/colors';
+import colors from '../colors/colors';
 
 export type ButtonState = 'normal' | 'hover' | 'inactive';
 export type ButtonType = 'state1' | 'state2';

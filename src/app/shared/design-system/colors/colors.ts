@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const colors = {
+const colors = {
   morado: '#4B1F9A',
   lavanda: '#9162F2',
   verdeClaro: '#54EE13',
@@ -37,3 +37,5 @@ export const colorPalette = StyleSheet.create({
     color: colors.gris,
   },
 });
+
+export default colors;

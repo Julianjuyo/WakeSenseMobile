@@ -1,10 +1,13 @@
 export type IPagesNavigation = {
-  loginScreen: undefined;
-  homeScreen: undefined;
-  listAlarmsScreen: undefined;
-  createAlarmScreen: {
-    initialHour: number;
-    initialMinute: number;
-    initialIsPM: boolean;
+  LoginScreen: undefined;
+  HomeScreen: undefined;
+  ListAlarmsScreen: undefined;
+  CreateAlarmScreen?: {
+    initialHour?: number;
+    initialMinute?: number;
+    initialIsPM?: boolean;
   };
+  ConfirmDeleteAlarmScreen: undefined;
+  NotificationsScreen: undefined;
+  SoundListScreen: undefined;
 };

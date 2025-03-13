@@ -3,7 +3,7 @@ import { StyleSheet, TextInput, View, TouchableOpacity } from 'react-native';
 import MaskInput, { createNumberMask } from 'react-native-mask-input';
 
 import Typography from '../Typography/Typography';
-import { colors } from '../colors/colors';
+import colors from '../colors/colors';
 import {
   ErrorIcon,
   EyeIcon,

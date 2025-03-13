@@ -11,11 +11,11 @@ import Button from '../../shared/design-system/components/Button';
 import IconButton from '../../shared/design-system/components/IconButton';
 import EmailInput from '../../shared/design-system/components/EmailInput';
 import PasswordInput from '../../shared/design-system/components/PasswordInput';
-import { useloginScreenScreen } from './hook';
+import  useLoginScreenScreen  from './hook';
 
-export default function loginScreen() {
+export default function LoginScreen() {
   const { email, setEmail, password, setPassword, isFormValid, handleLogin } =
-    useloginScreenScreen();
+    useLoginScreenScreen();
 
   return (
     <KeyboardAvoidingView

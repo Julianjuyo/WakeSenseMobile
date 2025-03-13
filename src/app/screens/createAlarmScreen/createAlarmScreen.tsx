@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
-import { colors } from '../../shared/design-system/colors/colors';
+import colors from '../../shared/design-system/colors/colors';
 import { MoonIcon, StarIcon } from '@/assets/icons';
 import Button from '../../shared/design-system/components/Button';
 import CustomSwitch from '../../shared/design-system/components/CustomSwitch';
 import LabelCustomSwitch from '../../shared/design-system/components/LabelCustomSwitch';
-import { useCreateAlarm } from './hook';
+import useCreateAlarm from './hook';
 import { RouteProp, useRoute } from '@react-navigation/native';
 
 interface CreateAlarmScreenProps {

@@ -1,5 +1,5 @@
 import { Text, TextProps } from 'react-native';
-import { typography } from './styles';
+import typography from './styles';
 
 export type TypographyType =
   | 'h1'

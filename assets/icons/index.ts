@@ -13,6 +13,7 @@ export { default as OnIcon } from './OnIcon';
 export { default as LockIcon } from './lockIcon';
 export { default as MailIcon } from './mailIcon';
 export { default as GoogleIcon } from './googleIcon';
+export { default as CheckIcon } from './checkIcon';
 
 export interface SvgComponentProps {
   width?: number;

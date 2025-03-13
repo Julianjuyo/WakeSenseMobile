@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Pressable, StyleSheet, View, Animated } from 'react-native';
-import { colors } from '../colors/colors';
+import colors from '../colors/colors';
 
 interface CustomSwitchProps {
   enabled: boolean; // Receive the initial enabled state

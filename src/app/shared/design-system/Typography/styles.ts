@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../colors/colors';
+import colors from '../colors/colors';
 
-export const typography = StyleSheet.create({
+const typography = StyleSheet.create({
   h1: {
     fontFamily: 'Inter-Light',
     fontSize: 36,
@@ -60,3 +60,5 @@ export const typography = StyleSheet.create({
     color: colors.negro,
   },
 });
+
+export default typography;

@@ -1,15 +1,18 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import loginScreen from '../screens/loginScreen/loginScreen';
-import homeScreen from '../screens/homeScreen/homeScreen';
-import listAlarmsScreen from '../screens/listAlarmsScreen/listAlarmsScreen';
-import createAlarmScreen from '../screens/createAlarmScreen/createAlarmScreen';
+import LoginScreen from '../screens/LoginScreen/LoginScreen';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import ListAlarmsScreen from '../screens/ListAlarmsScreen/ListAlarmsScreen';
+import CreateAlarmScreen from '../screens/CreateAlarmScreen/CreateAlarmScreen';
+import ConfirmDeleteAlarmScreen from '../screens/ConfirmDeleteAlarmScreen/ConfirmDeleteAlarmScreen';
+import NotificationsScreen from '../screens/NotificationsScreen/NotificationsScreen';
+import SoundListScreen from '../screens/SoundListScreen/SoundListScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function AppNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName={'createAlarmScreen'}
+      initialRouteName={'CreateAlarmScreen'}
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
@@ -17,23 +20,38 @@ export default function AppNavigator() {
       }}
     >
       <Stack.Screen
-        name="loginScreen"
-        component={loginScreen as any}
+        name="LoginScreen"
+        component={LoginScreen as any}
         options={{ gestureEnabled: false, animation: 'none' }}
       />
       <Stack.Screen
-        name="homeScreen"
-        component={homeScreen as any}
+        name="HomeScreen"
+        component={HomeScreen as any}
         options={{ gestureEnabled: false, animation: 'none' }}
       />
       <Stack.Screen
-        name="listAlarmsScreen"
-        component={listAlarmsScreen as any}
+        name="ListAlarmsScreen"
+        component={ListAlarmsScreen as any}
         options={{ gestureEnabled: false, animation: 'none' }}
       />
       <Stack.Screen
-        name="createAlarmScreen"
-        component={createAlarmScreen as any}
+        name="CreateAlarmScreen"
+        component={CreateAlarmScreen as any}
+        options={{ gestureEnabled: false, animation: 'none' }}
+      />
+      <Stack.Screen
+        name="ConfirmDeleteAlarmScreen"
+        component={ConfirmDeleteAlarmScreen as any}
+        options={{ gestureEnabled: false, animation: 'none' }}
+      />
+      <Stack.Screen
+        name="NotificationsScreen"
+        component={NotificationsScreen as any}
+        options={{ gestureEnabled: false, animation: 'none' }}
+      />
+      <Stack.Screen
+        name="SoundListScreen"
+        component={SoundListScreen as any}
         options={{ gestureEnabled: false, animation: 'none' }}
       />
     </Stack.Navigator>
